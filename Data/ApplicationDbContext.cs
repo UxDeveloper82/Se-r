@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MySiteR.Models;
+using MySiteR.Models.Comments;
 
 namespace MySiteR.Data
 {
@@ -14,6 +15,11 @@ namespace MySiteR.Data
         {
         }
 
+        public DbSet<MyMessage> MyMessages { get; set; }
+        public DbSet<Post> Posts { get; set; }
+
+        public DbSet<MainComment> MainComments { get; set; }
+        public DbSet<SubComment> SubComments { get; set; }
         public DbSet<Portfolio> Portfolios { get; set; }
     }
 }

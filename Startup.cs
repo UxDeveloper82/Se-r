@@ -37,6 +37,7 @@ namespace MySiteR
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddTransient<IPortRepository, PortRepository>();
+            services.AddTransient<IRepository, Repository>();
             services.AddTransient<IFileManager, FileManager>();
         }
 
