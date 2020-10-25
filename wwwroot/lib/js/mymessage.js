@@ -7,9 +7,9 @@ let submitForm = document.querySelector("#signupform");
 
           //Get values
           let name, email, message;
-          name = document.getElementById("MyMessage_Name").value;
-          email = document.getElementById("MyMessage_Email").value;
-          message = document.getElementById("MyMessage_Message").value;
+          name = document.getElementById("Name").value;
+          email = document.getElementById("Email").value;
+          message = document.getElementById("Message").value;
 
           if (name == "") {
         alert("Please enter your name !!!");
