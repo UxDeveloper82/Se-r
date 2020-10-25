@@ -1,0 +1,224 @@
+﻿
+@{
+    ViewData["Title"] = "About";
+}
+
+<style>
+    .tabs {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+        /* tab list item */
+        .tabs .tabs-list {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+            .tabs .tabs-list li {
+                width: 100px;
+                float: left;
+                margin: 0px;
+                margin-right: 2px;
+                padding: 10px 5px;
+                text-align: center;
+                background-color: cornflowerblue;
+                border-radius: 3px;
+            }
+
+                .tabs .tabs-list li:hover {
+                    cursor: pointer;
+                }
+
+                .tabs .tabs-list li a {
+                    text-decoration: none;
+                    color: white;
+                }
+        /* Tab content section */
+        .tabs .tab {
+            display: none;
+            width: 96%;
+            min-height: 250px;
+            height: auto;
+            border-radius: 3px;
+            padding: 20px 15px;
+            background-color: lavender;
+            color: darkslategray;
+            clear: both;
+        }
+
+            .tabs .tab h3 {
+                border-bottom: 3px solid cornflowerblue;
+                letter-spacing: 1px;
+                font-weight: normal;
+                padding: 5px;
+            }
+
+            .tabs .tab p {
+                line-height: 20px;
+                letter-spacing: 1px;
+            }
+    /* When active state */
+    .active {
+        display: block !important;
+    }
+
+    .tabs .tabs-list li.active {
+        background-color: lavender !important;
+        color: black !important;
+    }
+
+    .active a {
+        color: black !important;
+    }
+</style>
+
+<div class="container mt-4">
+    <div class="row">
+        <h1>Martin's Profile</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <img class="card-img-top img-thumbnail" src="~/images/admin/me.jpg" alt="{{user.knownAs}}">
+                <div class="card-body">
+                    <div>
+                        <strong>Location:</strong>
+                        <p class="text-dark">Orlando, Florida</p>
+                    </div>
+                    <div>
+                        <strong>Title:</strong>
+                        <p class="text-dark">
+                            FullStack-
+                            <span class="text-primary">Developer</span>
+                        </p>
+                    </div>
+                    <div class="social-icons">
+                        <a class="social-icon" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a class="social-icon" href="#"><i class="fa fa-github"></i></a>
+                        <a class="social-icon" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="social-icon" href="#"><i class="fa fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="btn-group d-flex">
+                        <a class="btn btn-primary w-100" asp-area="" asp-controller="Portfolio" asp-action="Index">Check Out My Projects ...</a>
+                        <button class="btn btn-success w-100" (click)="selectTab(3)">Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="tabs">
+                <ul class="tabs-list">
+                    <li class="active"><a href="#tab1">About</a></li>
+                    <li><a href="#tab2">Expertise</a></li>
+                    <li><a href="#tab3">Technologies</a></li>
+                </ul>
+                <div id="tab1" class="tab active">
+                    <h3 class="text-uppercase pt-5">Hi! Let me introduce myself, I'm Martin.</h3>
+                    <div class="paragraph py-4">
+                        <p class="para">
+                            Am Entrepreneur and love coming out with new Ideas, and pursuit new opportunities.
+                            My role as Asp.Net Developer is Producing code with .Net Framework (C#), I develop and write high-quality code, design, test,
+                            maintain and support custom mobile and web applications, and most importante meet
+                            customer requirements.
+                        </p>
+                    </div>
+                </div>
+                <div id="tab2" class="tab">
+                    <!-- Page Content-->
+                    <div class="container-fluid p-0">
+                        <!-- toggle area -->
+                        <section id="gallery">
+                            <div class="accordion container">
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <h2>I Love Working With</h2>
+                                        <hr>
+                                    </div>
+                                    <button class="accordion"><h3>Web Development.....</h3>Click Here For More Info</button>
+                                    <div class="panel">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img src="~/images/accordion/web-development.jpg" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <h2>We can create any Page for you</h2>
+                                                    <p class="text-black-50">We animate any web page and we organized your files</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="accordion"><h3>Software Developement......</h3>Click Here For More Info</button>
+                                    <div class="panel">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img src="~/images/accordion/software-developer.jpg" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <h2>We can create any Page for you</h2>
+                                                    <p class="text-black-50">We animate any web page and we organized your files</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="accordion"><h3>FullStack Developement.....</h3>Click Here For More Info</button>
+                                    <div class="panel">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <img src="~/images/accordion/FullStack.jpg" class="img-fluid">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <h2>We can create any Page for you</h2>
+                                                    <p class="text-black-50">We animate any web page and we organized your files</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div id="tab3" class="tab">
+                    <h3>My favorite languages</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">C#</li>
+                        <li class="list-group-item">Angular</li>
+                        <li class="list-group-item">Html 5</li>
+                        <li class="list-group-item">Css</li>
+                        <li class="list-group-item">Javascript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  ======================== End Brand Area ==============================  -->
+<!--  ======================= End Main Area ================================ -->
+
+@section Scripts{
+    <script src="~/lib/js/accordion.js"></script>
+    <script src="~/lib/js/script.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $(".tabs-list li a").click(function (e) {
+                    e.preventDefault();
+                });
+                $(".tabs-list li").click(function () {
+                    var tabid = $(this).find("a").attr("href");
+                    $(".tabs-list li,.tabs div.tab").removeClass("active");   // removing active class from tab
+                    $(".tab").hide();   // hiding open tab
+                    $(tabid).show();    // show tab
+                    $(this).addClass("active"); //  adding active class to clicked tab
+                });
+            });
+    </script>
+}

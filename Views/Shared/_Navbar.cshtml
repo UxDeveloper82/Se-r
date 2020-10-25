@@ -1,0 +1,54 @@
+﻿<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <div class="container">
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Icreatesites4u</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" asp-controller="Home" asp-action="About" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About
+                    </a>
+                    <div class="dropdown-menu mt-2" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" asp-controller="Home" asp-action="About">Meet the Owner</a>
+                        <a class="dropdown-item" href="/tools">Web Development Tools</a>
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="MyMessages" asp-action="New">Send Message</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Portfolio" asp-action="Index">Portfolio</a>
+                </li>
+                <li class="nav-item">@Html.ActionLink("My-Blog", "Index", "Post", new { area = "" }, new { @class = "nav-link" })</li>
+                <li class="nav-item" id="collapseExample">
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a class="list-group-item list-group-item-action bg-light link-collapse" asp-controller="Home" asp-action="HomeEdit">Home-Page</a>
+                        </li>
+                        <li class="dropdown-item" routerLinkActive="active">
+                            <a class="list-group-item list-group-item-action bg-light link-collapse" asp-controller="Home" asp-action="Edit">Edit Home-Page</a>
+                        </li>
+                        <li class="dropdown-item" routerLinkActive="active">
+                            <a class="list-group-item list-group-item-action bg-light link-collapse" asp-controller="Home" asp-action="Index">About-Page</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item"><a class="nav-link" asp-controller="Panel" asp-action="FrontPage">Admin Panel</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Auth" asp-action="Logout">Logout</a></li>
+                }
+                else
+                {
+                    <li class="nav-item">@Html.ActionLink("Sign In", "Login", "Auth", new { area = "" }, new { @class = "nav-link" })</li>
+
+                }
+            </ul>
+        </div>
+    </div>
+</nav>

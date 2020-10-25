@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Portfolio>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/portfolio.css" rel="stylesheet" />
+
+<!--  ======================= Start Main Area ================================ -->
+<main class="site-main">
+    <!--  ======================= Project Area =============================  -->
+    <section class="project-area">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="project-title pb-5">
+                    <h1 class="text-uppercase title-h1">Recently Done Project</h1>
+                    <h1 class="text-uppercase title-h1">Quality Work</h1>
+                    <hr />
+                </div>
+                <ul class="filters text-center">
+                    <li class="active" data-filter="*"><a href="#!">All</a></li>
+                    <li data-filter=".Angular"><a href="#!">AngularApp</a></li>
+                    <li data-filter=".Javascript"><a href="#!">Js templates</a></li>
+                    <li data-filter=".Core"><a href="#!">Asp.net Core</a></li>
+                    <li data-filter=".Data"><a href="#!">Data-tables</a></li>
+                    <li data-filter=".Templates"><a href="#!">Templates</a></li>
+                </ul>
+                <div class="projects">
+                    <div id="card" class="row grid justify-content-center">
+                        @foreach (var port in Model)
+                        {
+                            var image_path = $"/PortfolioPhoto/{port.PortfolioPhoto}";
+
+                            <div class="col-lg-4 item @port.Type">
+                                <div class="card">
+                                    <div class="card-head">
+                                        <img src="@image_path" alt="" class="img-fluid card-img">
+                                        <div class="card-overlay"><h2>@port.Name</h2></div>
+                                        <div class="card-hover">
+                                            <h2>Language: @port.Language</h2>
+                                            <p>Details: @port.Details</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body text-center">
+                                        <h4 class="title">@port.Name</h4>
+                                        <a href="@port.Link" class="btn btn-lg card-btn">Goto Page</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                </div>
+                <!--<div class="container-fluid">
+                    <div class="table-responsive">
+                        <table class="table table-stripped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Detail</th>
+                                    <th>Language</th>
+                                    <th>Link</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var port in Model)
+                                {
+                                <tr>
+                                    <td>@port.Id</td>
+                                    <td>@port.Name</td>
+                                    <td>@port.Type</td>
+                                    <td>@port.Details</td>
+                                    <td>@port.Language</td>
+                                    <td>@port.Link</td>
+                                    <td>
+                                        <a asp-controller="Panel" asp-action="Edit" asp-route-id="@port.Id">
+                                            Edit
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a asp-controller="Panel" asp-action="Remove" asp-route-id="@port.Id">
+                                            Remove
+                                        </a>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>-->
+                <!-- /#page-content-wrapper -->
+            </div>
+        </div>
+    </section>
+    <!--  ======================= End Project Area =============================  -->
+</main>
+<!--  ======================= End Main Area ================================ -->
+@section Scripts{
+    <script src="~/lib/js/portfolio.js"></script>
+}

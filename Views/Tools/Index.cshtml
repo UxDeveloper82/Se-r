@@ -1,0 +1,234 @@
+﻿@{
+
+    ViewData["Title"] = "Tools Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body
+    #slider,
+    .wrap,
+    .slide-content {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .wrap {
+        position: relative;
+    }
+
+    .slide {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .slide1 {
+        background-image: url("https://static.pexels.com/photos/302889/pexels-photo-302889.jpeg");
+    }
+
+    .slide2 {
+        background-image: url("https://static.pexels.com/photos/302892/pexels-photo-302892.jpeg");
+    }
+
+    .slide3 {
+        background-image: url("https://static.pexels.com/photos/226633/pexels-photo-226633.jpeg");
+    }
+
+    .slide-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+        .slide-content span {
+            font-size: 5rem;
+            color: #fff;
+        }
+
+    .arrow {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        margin-top: -35px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+
+    #arrow-left {
+        border-width: 30px 40px 30px 0;
+        border-color: transparent #fff transparent transparent;
+        left: 0;
+        margin-left: 30px;
+    }
+
+    #arrow-right {
+        border-width: 30px 0 30px 40px;
+        border-color: transparent transparent transparent #fff;
+        right: 0;
+        margin-right: 30px;
+    }
+</style>
+
+
+<div class="wrap post-main-img">
+    <div id="arrow-left" class="arrow"></div>
+    <div id="slider">
+        <div class="slide slide1">
+            <div class="slide-content">
+                <span>Share Ideas!</span>
+            </div>
+        </div>
+        <div class="slide slide2">
+            <div class="slide-content">
+                <span>Passion!!</span>
+            </div>
+        </div>
+        <div class="slide slide3">
+            <div class="slide-content">
+                <span>Goals!!!</span>
+            </div>
+        </div>
+    </div>
+    <div id="arrow-right" class="arrow"></div>
+</div>
+
+<!-- Tools -->
+<section id="tools">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="text-center">Best tools for Programming</h2>
+                <hr />
+            </div>
+        </div>
+        <div class="row box">
+            <div class="col-md-6 col-sm-6 col-xs-12 outside-container">
+                <img src="~/images/tools/github.png" class="img-fluid">
+                <div class="overlay">
+                    <div class="text">Github</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 shadow-lg bg-white rounded">
+                <h2 class="featurette-heading">
+                    Best place for backing up a repository data
+                    <br><span class="text-muted">See for yourself. Oh yeah, it's that good.</span>
+                </h2>
+                <p>
+                    But what the heck is GitHub and why are developers so excited about it?
+                    You may have heard that GitHub is a code sharing and publishing service,
+                    or that it’s a social networking site for programmers.
+                    Both statements are true, but neither explain exactly why GitHub is special.
+                </p>
+                <a class="btn btn-primary" href="https://github.com/">Go to link..</a>
+            </div>
+        </div>
+        <div class="row box">
+            <div class="col-md-6 col-sm-6 col-xs-12 outside-container">
+                <img src="~/images/tools/vscode.png" class="img-fluid">
+                <div class="overlay">
+                    <div class="text">Vscode</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 shadow-lg bg-white rounded">
+                <h2 class="featurette-heading">
+                    My favorite code editor
+                    <br><span class="text-muted">See for yourself. Oh yeah, it's that good.</span>
+                </h2>
+                <p>
+                    Visual Studio Code is a free source-code editor made by Microsoft for Windows,
+                    Linux and macOS. Features include support for debugging, syntax highlighting,
+                    intelligent code completion, snippets, code refactoring, and embedded Git.
+                </p>
+                <a class="btn btn-primary" href="https://code.visualstudio.com/download">Go to link..</a>
+            </div>
+        </div>
+        <div class="row box">
+            <div class="col-md-6 col-sm-6 col-xs-12 outside-container">
+                <img src="~/images/tools/vs2019.png" class="img-fluid">
+                <div class="overlay">
+                    <div class="text">Visual Studio<br />2019</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 shadow-lg bg-white rounded">
+                <h2 class="featurette-heading">
+                    My favorite code editor
+                    <br><span class="text-muted">See for yourself. Oh yeah, it's that good.</span>
+                </h2>
+                <p>
+                    I love Visual Studio cause When you sign into Visual Studio Community, you get access to a broad set of free developer tools,
+                    selected Xamarin University courses on-demand, Pluralsight training, Azure credits, and more as part of Visual Studio Dev Essentials.
+                </p>
+                <a class="btn btn-primary" href="https://code.visualstudio.com/download">Go to link..</a>
+            </div>
+        </div>
+        <div class="row box">
+            <div class="col-md-6 col-sm-6 col-xs-12 outside-container">
+                <img src="~/images/tools/devtools.png" class="img-fluid">
+                <div class="overlay">
+                    <div class="text">Chrome-DevTools</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 shadow-lg bg-white rounded">
+                <h2 class="featurette-heading">
+                    Oh yeah, it's that good.
+                    <br><span class="text-muted">See for yourself.</span>
+                </h2>
+                <p>
+                    Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.
+                    DevTools can help you edit pages on-the-fly and diagnose problems quickly, which ultimately helps you build better websites, faster.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners -->
+<!--  ======================== Brand Area ==============================  -->
+<section class="brand-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                <h2 class="text-center">Best Websites for Learning Programming in 2020</h2>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <div id="links" class="first-row row"></div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="experiencearea col-md-6 col-sm-6 shadow-lg bg-white rounded">
+                    <div class="d-flex flex-row years-area">
+                        <h2 class="p-3 years">3</h2>
+                        <h2>
+                            <span>Years</span>
+                            <span>Experience</span>
+                            <span>Working</span>
+                        </h2>
+                    </div>
+                    <div class="d-flex flex-row flex-wrap call-area">
+                        <span><i class="fas fa-phone-alt fa-3x px-3"></i></span>
+                        <div class="call-now">
+                            <a href="#" class="text-uppercase h4 font-roboto">Call Now</a>
+                            <span class="font-roboto py-2">(863)969-8248</span>
+                        </div>
+                    </div>
+                    <div class="bg-panel"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script src="~/lib/js/websites.js"></script>
+    <script src="~/lib/js/sliderimages.js"></script>
+}

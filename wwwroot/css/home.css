@@ -1,0 +1,143 @@
+﻿﻿ /* Services Area */
+#services .services {
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5%;
+    padding: 10px;
+    background: rgba(248, 252, 253, 0.973);
+}
+
+#services .services:hover {
+    box-shadow: 5px 10px black;
+}
+/* End Services Area */
+
+
+/*  Card Area*/
+#card-area .core-features {
+    box-shadow: 0 0 10px 0 rgba(83, 82, 82,0.1);
+    margin-bottom: 30px;
+    text-align: center;
+    background: #fff;
+}
+
+    #card-area .core-features h3 {
+        color: #232323;
+        font-size: 18px;
+        padding: 30px 0 10px;
+        text-transform: capitalize;
+    }
+
+    #card-area .core-features p {
+        color: #232323;
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+#card-area .circle {
+    border: 5px solid #f3f3f5;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #e7e8ec inset;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+    #card-area .circle img {
+        display: table;
+        height: 74px;
+        margin: 16px auto;
+        width: 74px;
+    }
+/*Card area End*/
+
+/* owl carousel */
+#owl-demo .item {
+    margin: 3px;
+}
+
+    #owl-demo .item img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+.about-area #owl-demo .item {
+    color: #999;
+    font-size: 14px;
+    overflow: hidden;
+    min-height: 340px;
+}
+
+#owl-demo .item {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+    #owl-demo .item .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+/* End About Me */
+/* Hours-area*/
+.hours {
+    text-align: center;
+    padding: 100px 0;
+    background-image: url('../images/contact/contact-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parallax--bg {
+    transition: initial;
+}
+
+.hours h2 {
+    font-size: 285%;
+    color: #fff;
+    font-weight: 700;
+}
+
+.hours p {
+    font-size: 255%;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Subscribe me */
+
+.title-heading1 h3 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+    padding: 0px 50px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.input-group > .form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
+    font-family: "Open Sans", sans-serif;
+    padding: 14px 30px 14px !important;
+    text-transform: uppercase;
+    vertical-align: middle;
+    letter-spacing: 0.05em;
+}
+/* End subscribe me */
